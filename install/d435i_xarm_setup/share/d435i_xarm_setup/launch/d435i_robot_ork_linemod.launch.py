@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_vision/d435i_xarm_setup/launch/d435i_robot_ork_linemod.launch.py

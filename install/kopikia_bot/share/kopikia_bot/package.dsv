@@ -1,0 +1,9 @@
+source;share/kopikia_bot/hook/pythonpath.ps1
+source;share/kopikia_bot/hook/pythonpath.dsv
+source;share/kopikia_bot/hook/pythonpath.sh
+source;share/kopikia_bot/hook/ament_prefix_path.ps1
+source;share/kopikia_bot/hook/ament_prefix_path.dsv
+source;share/kopikia_bot/hook/ament_prefix_path.sh
+source;../../build/kopikia_bot/share/kopikia_bot/hook/pythonpath_develop.ps1
+source;../../build/kopikia_bot/share/kopikia_bot/hook/pythonpath_develop.dsv
+source;../../build/kopikia_bot/share/kopikia_bot/hook/pythonpath_develop.sh

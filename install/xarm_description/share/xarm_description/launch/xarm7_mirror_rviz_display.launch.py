@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_description/launch/xarm7_mirror_rviz_display.launch.py

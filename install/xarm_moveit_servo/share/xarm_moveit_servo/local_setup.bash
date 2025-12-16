@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_moveit_servo/ament_cmake_environment_hooks/local_setup.bash

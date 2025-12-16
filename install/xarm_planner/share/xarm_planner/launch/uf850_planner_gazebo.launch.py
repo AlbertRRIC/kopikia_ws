@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_planner/launch/uf850_planner_gazebo.launch.py

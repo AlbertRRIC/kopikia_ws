@@ -1,0 +1,23 @@
+[1.771s] Invoking command in '/home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib': PYTHONPATH=/home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/build --no-deps symlink_data
+[2.808s] running develop
+[3.309s] running egg_info
+[3.310s] creating uf_ros_lib.egg-info
+[3.311s] writing uf_ros_lib.egg-info/PKG-INFO
+[3.311s] writing dependency_links to uf_ros_lib.egg-info/dependency_links.txt
+[3.311s] writing entry points to uf_ros_lib.egg-info/entry_points.txt
+[3.311s] writing requirements to uf_ros_lib.egg-info/requires.txt
+[3.311s] writing top-level names to uf_ros_lib.egg-info/top_level.txt
+[3.312s] writing manifest file 'uf_ros_lib.egg-info/SOURCES.txt'
+[3.318s] reading manifest file 'uf_ros_lib.egg-info/SOURCES.txt'
+[3.324s] writing manifest file 'uf_ros_lib.egg-info/SOURCES.txt'
+[3.325s] running build_ext
+[3.325s] Creating /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/lib/python3.10/site-packages/uf-ros-lib.egg-link (link to .)
+[3.326s] 
+[3.333s] Installed /home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib
+[3.333s] running symlink_data
+[3.333s] creating /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/share/ament_index
+[3.333s] creating /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/share/ament_index/resource_index
+[3.334s] creating /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/share/ament_index/resource_index/packages
+[3.334s] symbolically linking /home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/resource/uf_ros_lib -> /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/share/ament_index/resource_index/packages
+[3.334s] symbolically linking /home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/package.xml -> /home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/share/uf_ros_lib
+[3.434s] Invoked command in '/home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib' returned '0': PYTHONPATH=/home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetsonros2/MyProject/kopikia_ws/build/uf_ros_lib/build --no-deps symlink_data

@@ -1,0 +1,283 @@
+[0.012s] Invoking command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake /home/jetsonros2/MyProject/kopikia_ws/src/audio_common/audio_common_msgs -DCMAKE_INSTALL_PREFIX=/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs
+[0.059s] -- The C compiler identification is GNU 11.4.0
+[0.112s] -- The CXX compiler identification is GNU 11.4.0
+[0.119s] -- Detecting C compiler ABI info
+[0.191s] -- Detecting C compiler ABI info - done
+[0.197s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.198s] -- Detecting C compile features
+[0.198s] -- Detecting C compile features - done
+[0.200s] -- Detecting CXX compiler ABI info
+[0.268s] -- Detecting CXX compiler ABI info - done
+[0.273s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.273s] -- Detecting CXX compile features
+[0.274s] -- Detecting CXX compile features - done
+[0.276s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.391s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.465s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.469s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.476s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.516s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.541s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.750s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.903s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.103s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.120s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.122s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.141s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.141s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.141s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.141s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.161s] -- Found PythonExtra: .so  
+[1.208s] -- Configuring done
+[1.253s] -- Generating done
+[1.265s] -- Build files have been written to: /home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs
+[1.272s] Invoked command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake /home/jetsonros2/MyProject/kopikia_ws/src/audio_common/audio_common_msgs -DCMAKE_INSTALL_PREFIX=/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs
+[1.274s] Invoking command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake --build /home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs -- -j20 -l20
+[1.307s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.316s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.325s] [  4%] Built target ament_cmake_python_copy_audio_common_msgs
+[1.521s] running egg_info
+[1.522s] creating audio_common_msgs.egg-info
+[1.522s] writing audio_common_msgs.egg-info/PKG-INFO
+[1.523s] writing dependency_links to audio_common_msgs.egg-info/dependency_links.txt
+[1.523s] writing top-level names to audio_common_msgs.egg-info/top_level.txt
+[1.523s] writing manifest file 'audio_common_msgs.egg-info/SOURCES.txt'
+[1.525s] reading manifest file 'audio_common_msgs.egg-info/SOURCES.txt'
+[1.525s] writing manifest file 'audio_common_msgs.egg-info/SOURCES.txt'
+[1.550s] [  4%] Built target ament_cmake_python_build_audio_common_msgs_egg
+[1.634s] [  4%] Built target audio_common_msgs__cpp
+[1.647s] [ 14%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_c.dir/rosidl_generator_c/audio_common_msgs/msg/detail/audio_info__functions.c.o[0m
+[1.647s] [ 14%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_c.dir/rosidl_generator_c/audio_common_msgs/msg/detail/audio_data_stamped__functions.c.o[0m
+[1.648s] [ 14%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_c.dir/rosidl_generator_c/audio_common_msgs/msg/detail/audio_data__functions.c.o[0m
+[1.648s] [ 14%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.648s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.648s] [ 17%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.701s] [ 19%] [32m[1mLinking C shared library libaudio_common_msgs__rosidl_generator_c.so[0m
+[1.741s] [ 19%] Built target audio_common_msgs__rosidl_generator_c
+[1.752s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.753s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.755s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.043s] [ 29%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/audio_common_msgs/msg/audio_data_stamped__type_support.cpp.o[0m
+[2.043s] [ 29%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/audio_common_msgs/msg/detail/dds_fastrtps/audio_data__type_support.cpp.o[0m
+[2.044s] [ 31%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/audio_common_msgs/msg/audio_data__type_support.cpp.o[0m
+[2.044s] [ 34%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/audio_common_msgs/msg/audio_info__type_support.cpp.o[0m
+[2.044s] [ 36%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/audio_common_msgs/msg/detail/audio_data_stamped__type_support.cpp.o[0m
+[2.046s] [ 40%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/audio_common_msgs/msg/detail/audio_data__type_support.cpp.o[0m
+[2.046s] [ 40%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/audio_common_msgs/msg/detail/dds_fastrtps/audio_info__type_support.cpp.o[0m
+[2.047s] [ 42%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/audio_common_msgs/msg/detail/dds_fastrtps/audio_data_stamped__type_support.cpp.o[0m
+[2.047s] [ 44%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/audio_common_msgs/msg/detail/audio_info__type_support.cpp.o[0m
+[2.189s] [ 46%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/audio_common_msgs/msg/detail/audio_info__type_support.c.o[0m
+[2.190s] [ 51%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/audio_common_msgs/msg/detail/audio_data__type_support.c.o[0m
+[2.190s] [ 51%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/audio_common_msgs/msg/detail/audio_data_stamped__type_support.c.o[0m
+[2.201s] [ 55%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/audio_common_msgs/msg/audio_data__type_support.cpp.o[0m
+[2.204s] [ 55%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/audio_common_msgs/msg/audio_data_stamped__type_support.cpp.o[0m
+[2.204s] [ 57%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/audio_common_msgs/msg/audio_info__type_support.cpp.o[0m
+[2.261s] [ 59%] [32m[1mLinking C shared library libaudio_common_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.271s] [ 61%] [32m[1mLinking CXX shared library libaudio_common_msgs__rosidl_typesupport_c.so[0m
+[2.298s] [ 63%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/audio_common_msgs/msg/detail/audio_data__type_support_c.cpp.o[0m
+[2.299s] [ 65%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/audio_common_msgs/msg/detail/audio_data_stamped__type_support_c.cpp.o[0m
+[2.300s] [ 68%] [32mBuilding CXX object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/audio_common_msgs/msg/detail/audio_info__type_support_c.cpp.o[0m
+[2.327s] [ 68%] Built target audio_common_msgs__rosidl_typesupport_introspection_c
+[2.359s] [ 68%] Built target audio_common_msgs__rosidl_typesupport_c
+[2.493s] [ 70%] [32m[1mLinking CXX shared library libaudio_common_msgs__rosidl_typesupport_cpp.so[0m
+[2.561s] [ 70%] Built target audio_common_msgs__rosidl_typesupport_cpp
+[2.685s] [ 72%] [32m[1mLinking CXX shared library libaudio_common_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.725s] [ 74%] [32m[1mLinking CXX shared library libaudio_common_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.773s] [ 76%] [32m[1mLinking CXX shared library libaudio_common_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[2.790s] [ 76%] Built target audio_common_msgs__rosidl_typesupport_introspection_cpp
+[2.832s] [ 76%] Built target audio_common_msgs__rosidl_typesupport_fastrtps_cpp
+[2.855s] [ 76%] Built target audio_common_msgs__rosidl_typesupport_fastrtps_c
+[2.871s] [ 76%] Built target audio_common_msgs
+[2.886s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.221s] [ 78%] Built target audio_common_msgs__py
+[3.238s] [ 85%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_py.dir/rosidl_generator_py/audio_common_msgs/msg/_audio_info_s.c.o[0m
+[3.238s] [ 85%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_py.dir/rosidl_generator_py/audio_common_msgs/msg/_audio_data_s.c.o[0m
+[3.238s] [ 85%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_generator_py.dir/rosidl_generator_py/audio_common_msgs/msg/_audio_data_stamped_s.c.o[0m
+[3.309s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/audio_common_msgs/libaudio_common_msgs__rosidl_generator_py.so[0m
+[3.342s] [ 87%] Built target audio_common_msgs__rosidl_generator_py
+[3.358s] [ 93%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.358s] [ 93%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[3.358s] [ 93%] [32mBuilding C object CMakeFiles/audio_common_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.427s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.428s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.429s] [100%] [32m[1mLinking C shared library rosidl_generator_py/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.460s] [100%] Built target audio_common_msgs__rosidl_typesupport_introspection_c__pyext
+[3.460s] [100%] Built target audio_common_msgs__rosidl_typesupport_c__pyext
+[3.463s] [100%] Built target audio_common_msgs__rosidl_typesupport_fastrtps_c__pyext
+[3.474s] Invoked command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake --build /home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs -- -j20 -l20
+[3.484s] Invoking command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake --install /home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs
+[3.490s] -- Install configuration: ""
+[3.491s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/ament_index/resource_index/rosidl_interfaces/audio_common_msgs
+[3.491s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.491s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.491s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/rosidl_generator_c__visibility_control.h
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_info.h
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_data_stamped.h
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_data.h
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__functions.c
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__type_support.h
+[3.492s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__functions.c
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__type_support.h
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__struct.h
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__functions.h
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__functions.c
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__type_support.h
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__functions.h
+[3.493s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__functions.h
+[3.494s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__struct.h
+[3.494s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__struct.h
+[3.494s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/library_path.sh
+[3.494s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/library_path.dsv
+[3.494s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_generator_c.so
+[3.495s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_generator_c.so" to ""
+[3.495s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.495s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.495s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.495s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.495s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__rosidl_typesupport_fastrtps_c.h
+[3.495s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__rosidl_typesupport_fastrtps_c.h
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__rosidl_typesupport_fastrtps_c.h
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_fastrtps_c.so
+[3.496s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[3.496s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.496s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.496s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__rosidl_typesupport_introspection_c.h
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__type_support.c
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__type_support.c
+[3.496s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__rosidl_typesupport_introspection_c.h
+[3.497s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__rosidl_typesupport_introspection_c.h
+[3.497s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__type_support.c
+[3.497s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.497s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_introspection_c.so
+[3.498s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_introspection_c.so" to ""
+[3.498s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_c.so
+[3.498s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_c.so" to ""
+[3.498s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.498s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.498s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_data_stamped.hpp
+[3.498s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.498s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.498s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__builder.hpp
+[3.498s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__builder.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__type_support.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__struct.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__struct.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__traits.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__struct.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__builder.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__traits.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__type_support.hpp
+[3.499s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__type_support.hpp
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__traits.hpp
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_info.hpp
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/audio_data.hpp
+[3.500s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.500s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.500s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[3.500s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__rosidl_typesupport_fastrtps_cpp.hpp
+[3.501s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__rosidl_typesupport_fastrtps_cpp.hpp
+[3.501s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/dds_fastrtps
+[3.501s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_fastrtps_cpp.so
+[3.501s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.501s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs
+[3.501s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg
+[3.501s] -- Up-to-date: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail
+[3.501s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__type_support.cpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__rosidl_typesupport_introspection_cpp.hpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data__type_support.cpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__type_support.cpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_info__rosidl_typesupport_introspection_cpp.hpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/include/audio_common_msgs/audio_common_msgs/msg/detail/audio_data_stamped__rosidl_typesupport_introspection_cpp.hpp
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_introspection_cpp.so
+[3.502s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_cpp.so
+[3.502s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_typesupport_cpp.so" to ""
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/pythonpath.sh
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/pythonpath.dsv
+[3.502s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs-0.3.12-py3.10.egg-info
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs-0.3.12-py3.10.egg-info/PKG-INFO
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs-0.3.12-py3.10.egg-info/SOURCES.txt
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs-0.3.12-py3.10.egg-info/top_level.txt
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs-0.3.12-py3.10.egg-info/dependency_links.txt
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs
+[3.503s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/__init__.py
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/libaudio_common_msgs__rosidl_generator_py.so
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data_s.c
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data.py
+[3.504s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/__init__.py
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_info_s.c
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_info.py
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data_stamped_s.c
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data_stamped.py
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_c.c
+[3.505s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/_audio_common_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.537s] Listing '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs'...
+[3.537s] Compiling '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/__init__.py'...
+[3.538s] Listing '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg'...
+[3.538s] Compiling '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/__init__.py'...
+[3.538s] Compiling '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data.py'...
+[3.538s] Compiling '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_data_stamped.py'...
+[3.538s] Compiling '/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/msg/_audio_info.py'...
+[3.541s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.541s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.541s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.542s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.542s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.542s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/local/lib/python3.10/dist-packages/audio_common_msgs/audio_common_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.542s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_generator_py.so
+[3.543s] -- Set runtime path of "/home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/lib/libaudio_common_msgs__rosidl_generator_py.so" to ""
+[3.543s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioData.idl
+[3.543s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioDataStamped.idl
+[3.543s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioInfo.idl
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioData.msg
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioDataStamped.msg
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/msg/AudioInfo.msg
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/ament_index/resource_index/package_run_dependencies/audio_common_msgs
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/ament_index/resource_index/parent_prefix_path/audio_common_msgs
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/ament_prefix_path.sh
+[3.544s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/ament_prefix_path.dsv
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/path.sh
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/environment/path.dsv
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/local_setup.bash
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/local_setup.sh
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/local_setup.zsh
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/local_setup.dsv
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/package.dsv
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/ament_index/resource_index/packages/audio_common_msgs
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_generator_cExport.cmake
+[3.545s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_generator_cExport-noconfig.cmake
+[3.546s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[3.546s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.546s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_introspection_cExport.cmake
+[3.546s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.546s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_cExport.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_generator_cppExport.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[3.547s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.548s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_cppExport.cmake
+[3.548s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[3.548s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_generator_pyExport.cmake
+[3.548s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/export_audio_common_msgs__rosidl_generator_pyExport-noconfig.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/rosidl_cmake-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.549s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.550s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgsConfig.cmake
+[3.550s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/cmake/audio_common_msgsConfig-version.cmake
+[3.550s] -- Installing: /home/jetsonros2/MyProject/kopikia_ws/src/install/audio_common_msgs/share/audio_common_msgs/package.xml
+[3.552s] Invoked command in '/home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetsonros2/MyProject/kopikia_ws/install/uf_ros_lib:/home/jetsonros2/MyProject/kopikia_ws/install/kopikia_bot:/opt/ros/humble /usr/bin/cmake --install /home/jetsonros2/MyProject/kopikia_ws/src/build/audio_common_msgs

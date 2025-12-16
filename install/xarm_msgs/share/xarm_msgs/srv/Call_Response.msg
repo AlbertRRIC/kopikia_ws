@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_cmake/srv/Call_Response.msg

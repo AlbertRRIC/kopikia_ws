@@ -1,0 +1,3 @@
+[console_scripts]
+preparm = kopikia_bot.PrepArm:main
+

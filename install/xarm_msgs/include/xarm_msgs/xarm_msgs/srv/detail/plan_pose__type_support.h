@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_generator_c/xarm_msgs/srv/detail/plan_pose__type_support.h

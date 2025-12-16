@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_generator_py/xarm_msgs/srv/_linear_track_set_pos_s.c

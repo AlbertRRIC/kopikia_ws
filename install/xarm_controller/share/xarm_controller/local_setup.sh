@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_controller/ament_cmake_environment_hooks/local_setup.sh

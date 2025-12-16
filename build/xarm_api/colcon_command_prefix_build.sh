@@ -1,0 +1,4 @@
+# generated from colcon_core/shell/template/command_prefix.sh.em
+. "/home/jetsonros2/MyProject/kopikia_ws/install/xarm_description/share/xarm_description/package.sh"
+. "/home/jetsonros2/MyProject/kopikia_ws/install/xarm_msgs/share/xarm_msgs/package.sh"
+. "/home/jetsonros2/MyProject/kopikia_ws/install/xarm_sdk/share/xarm_sdk/package.sh"

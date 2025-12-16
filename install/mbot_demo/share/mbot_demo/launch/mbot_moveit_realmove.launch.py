@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/demo/mbot_demo/launch/mbot_moveit_realmove.launch.py

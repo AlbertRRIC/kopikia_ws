@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_description/config/kinematics/gen_kinematics_params.py

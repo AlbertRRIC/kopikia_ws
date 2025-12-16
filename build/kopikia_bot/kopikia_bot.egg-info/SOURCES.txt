@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+kopikia_bot/PrepArm.py
+kopikia_bot/__init__.py
+kopikia_bot.egg-info/PKG-INFO
+kopikia_bot.egg-info/SOURCES.txt
+kopikia_bot.egg-info/dependency_links.txt
+kopikia_bot.egg-info/entry_points.txt
+kopikia_bot.egg-info/requires.txt
+kopikia_bot.egg-info/top_level.txt
+kopikia_bot.egg-info/zip-safe
+resource/kopikia_bot

@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_generator_c/xarm_msgs/srv/detail/robotiq_get_status__type_support.h

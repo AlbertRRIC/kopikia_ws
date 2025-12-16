@@ -1,0 +1,8 @@
+{
+  "package_name": "audio_common_msgs",
+  "non_idl_tuples": [
+    "/home/jetsonros2/MyProject/kopikia_ws/src/audio_common/audio_common_msgs:msg/AudioData.msg",
+    "/home/jetsonros2/MyProject/kopikia_ws/src/audio_common/audio_common_msgs:msg/AudioDataStamped.msg",
+    "/home/jetsonros2/MyProject/kopikia_ws/src/audio_common/audio_common_msgs:msg/AudioInfo.msg"
+  ]
+}

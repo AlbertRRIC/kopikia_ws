@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import '../ros/ros_connection.dart';
+
+class PositionCupScreen extends StatelessWidget {
+  final RosConnection? rosConnection;
+
+  const PositionCupScreen({super.key, this.rosConnection});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        centerTitle: true,
+        title: const Text(
+          'Position Cup',
+          style: TextStyle(
+            fontSize: 36,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // BIG IMAGE
+            Image.asset(
+              'assets/images/position_cup.png',
+              width: 1280,
+              height: 1024,
+              fit: BoxFit.contain,
+            ),
+
+            const SizedBox(height: 24),
+
+            const Text(
+              'Robot is transferring empty cup to coffee machine',
+              style: TextStyle(
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

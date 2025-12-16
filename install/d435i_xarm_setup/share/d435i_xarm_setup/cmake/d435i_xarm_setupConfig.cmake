@@ -1,0 +1,1 @@
+/home/jetsonros2/MyProject/kopikia_ws/build/d435i_xarm_setup/ament_cmake_core/d435i_xarm_setupConfig.cmake
