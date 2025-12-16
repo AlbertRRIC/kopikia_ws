@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_vision/d435i_xarm_setup/launch/grasp_node_robot_api.launch.py

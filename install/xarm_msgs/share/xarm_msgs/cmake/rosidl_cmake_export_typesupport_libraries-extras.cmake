@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake

@@ -1,2 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/install/xarm_moveit_servo/lib/libxarm_joystick_input.so
-/home/jetsonros2/MyProject/kopikia_ws/install/xarm_moveit_servo/lib/xarm_moveit_servo/xarm_keyboard_input

@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_generator_cpp/xarm_msgs/srv/detail/linear_track_set_pos__traits.hpp

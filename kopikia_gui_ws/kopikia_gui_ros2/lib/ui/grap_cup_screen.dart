@@ -1,10 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 import '../ros/ros_connection.dart';
 
-class GrapCupScreen extends StatelessWidget {
+class GrapCupScreen extends StatefulWidget {
   final RosConnection? rosConnection;
 
   const GrapCupScreen({super.key, this.rosConnection});
+
+  @override
+  State<GrapCupScreen> createState() => _GrapCupScreenState();
+}
+
+class _GrapCupScreenState extends State<GrapCupScreen> {
+  final AudioPlayer _player = AudioPlayer();
+
+  @override
+  void initState() {
+    super.initState();
+    _playSound();
+  }
+
+  Future<void> _playSound() async {
+    await _player.play(AssetSource('audio/GrapCup.wav'));
+    // Make sure you declared assets/sounds/grap_cup.wav in pubspec.yaml
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +50,13 @@ class GrapCupScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // BIG IMAGE
             Image.asset(
               'assets/images/grap_cup.png',
               width: 1280,
               height: 1024,
               fit: BoxFit.contain,
             ),
-
             const SizedBox(height: 24),
-
             const Text(
               'Robot is grabbing the filled cup from coffee machine',
               style: TextStyle(

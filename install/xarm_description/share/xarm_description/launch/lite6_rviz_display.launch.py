@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_description/launch/lite6_rviz_display.launch.py

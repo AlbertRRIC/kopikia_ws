@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_planner/ament_cmake_core/xarm_plannerConfig.cmake

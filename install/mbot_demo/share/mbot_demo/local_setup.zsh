@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/mbot_demo/ament_cmake_environment_hooks/local_setup.zsh

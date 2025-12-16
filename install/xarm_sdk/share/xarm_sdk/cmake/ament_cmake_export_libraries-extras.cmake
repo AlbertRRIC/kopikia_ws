@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

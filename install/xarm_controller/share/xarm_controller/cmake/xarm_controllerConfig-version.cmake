@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_controller/ament_cmake_core/xarm_controllerConfig-version.cmake

@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_moveit_config/launch/xarm5_moveit_realmove.launch.py

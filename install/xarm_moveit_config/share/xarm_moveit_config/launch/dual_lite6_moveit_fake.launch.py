@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_moveit_config/launch/dual_lite6_moveit_fake.launch.py

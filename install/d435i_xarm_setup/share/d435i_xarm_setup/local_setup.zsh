@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/d435i_xarm_setup/ament_cmake_environment_hooks/local_setup.zsh

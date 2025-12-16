@@ -31,7 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
   rosbridge: ^0.0.3-dev+4
-  
+  audioplayers: ^5.2.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -77,6 +78,16 @@ flutter:
     - assets/images/grap_cup.png		
     - assets/images/cup_transition.png		
     - assets/images/serve_cup.png
+
+    - assets/audio/CupAcquired.wav
+    - assets/audio/CupTransition.wav
+    - assets/audio/DrinkReady.wav
+    - assets/audio/DrinkStarted.wav
+    - assets/audio/FetchCup.wav
+    - assets/audio/GrapCup.wav
+    - assets/audio/PositionCup.wav
+    - assets/audio/SelectDrink.wav
+    - assets/audio/ServedCup.wav
 
   # To add assets to your application, add an assets section, like this:
   # assets:

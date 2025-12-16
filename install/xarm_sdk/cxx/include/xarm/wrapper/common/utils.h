@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/src/xarm_ros2/xarm_sdk/cxx/include/xarm/wrapper/common/utils.h

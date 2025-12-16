@@ -1,1 +1,0 @@
-/home/jetsonros2/MyProject/kopikia_ws/build/xarm_msgs/rosidl_generator_py/xarm_msgs/srv/_plan_joint.py
