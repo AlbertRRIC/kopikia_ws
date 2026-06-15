@@ -53,7 +53,7 @@ class _SelectDrinkScreenState extends State<SelectDrinkScreen> {
             Image.asset(
               'assets/images/select_drink.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),

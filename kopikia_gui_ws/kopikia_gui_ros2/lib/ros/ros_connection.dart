@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:rosbridge/rosbridge.dart';
 import 'package:flutter/widgets.dart';
 
@@ -10,29 +11,48 @@ class RosConnection {
   // --- NEW: Notifier to trigger screen changes ---
   ValueNotifier<String> screenNotifier = ValueNotifier<String>('home');
 
-  // Queues for deferred subscriptions and publications
-  final List<_DeferredSubscription> _subscriptionQueue = [];
+  // --- NEW: Notifier for local Wi-Fi IP ---
+  ValueNotifier<String> localIpNotifier = ValueNotifier<String>('Detecting...');
+
+  // Storage for persistent subscriptions and temporary publication queue
+  final List<_DeferredSubscription> _activeSubscriptions = [];
   final List<_DeferredPublication> _publicationQueue = [];
 
-  RosConnection({this.url = 'ws://172.26.115.102:9090'}) {
+  RosConnection({this.url = 'ws://127.0.0.1:9090'}) {
     ros = Ros(url: url);
+    _initLocalIp();
+    _initializeStatusListener();
     _connect();
   }
 
-  void _connect() {
-    ros.connect();
+  void _initLocalIp() async {
+    try {
+      final interfaces = await NetworkInterface.list(type: InternetAddressType.IPv4);
+      for (var interface in interfaces) {
+        for (var addr in interface.addresses) {
+          if (!addr.isLoopback) {
+            localIpNotifier.value = addr.address;
+            return;
+          }
+        }
+      }
+      localIpNotifier.value = 'Offline';
+    } catch (e) {
+      localIpNotifier.value = 'Unknown';
+    }
+  }
 
+  void _initializeStatusListener() {
     ros.statusStream.listen((status) {
-      debugPrint("[ROS] Status: $status");
+      debugPrint("[ROS] Connection Status Changed: $status");
       if (status == Status.connected) {
         connected = true;
-        debugPrint("[ROS] Connected to rosbridge");
+        debugPrint("[ROS] Connected! Ready to communicate on $url");
 
-        // Process any queued subscriptions
-        for (var sub in _subscriptionQueue) {
-          _doSubscribe(sub.topicName, sub.onData);
+        // Re-establish all active subscriptions on (re)connection
+        for (var sub in _activeSubscriptions) {
+          _doSubscribe(sub.topicName, sub.onData, messageType: sub.messageType);
         }
-        _subscriptionQueue.clear();
 
         // Process any queued publications
         for (var pub in _publicationQueue) {
@@ -41,28 +61,41 @@ class RosConnection {
         _publicationQueue.clear();
       } else {
         connected = false;
-        debugPrint("[ROS] Disconnected from rosbridge");
+        debugPrint("[ROS] Not connected (State: $status). Retrying in 5s...");
+        
+        // Robust retry: triggers even if initial connection failed
+        Future.delayed(const Duration(seconds: 5), () {
+          if (!connected && ros.status != Status.connected) {
+            debugPrint("[ROS] Retrying connection to $url...");
+            _connect();
+          }
+        });
       }
     });
   }
 
+  void _connect() {
+    try {
+      debugPrint("[ROS] Connecting to $url...");
+      ros.connect();
+    } catch (e) {
+      debugPrint("[ROS] Immediate connection error: $e");
+    }
+  }
+
   /// Subscribe safely, even if not connected yet
   void subscribe(String topicName, void Function(dynamic) onData, {String messageType = "std_msgs/String"}) {
+    // Add to persistent list so we can re-subscribe on reconnect
+    _activeSubscriptions.add(_DeferredSubscription(topicName, onData, messageType: messageType));
+    
     if (connected) {
       _doSubscribe(topicName, onData, messageType: messageType);
-    } else {
-      debugPrint("[ROS] Not connected. Queuing subscription to $topicName");
-      _subscriptionQueue.add(_DeferredSubscription(topicName, onData, messageType: messageType));
     }
   }
 
   void _doSubscribe(String topicName, void Function(dynamic) onData, {String messageType = "std_msgs/String"}) {
     Topic topic = Topic(ros: ros, name: topicName, type: messageType);
-    // Wrap the user-provided handler so it matches the package's
-    // `SubscribeHandler` signature expected by `topic.subscribe`.
-    //topic.subscribe((message) async => onData(message));
     topic.subscribe((message) async => onData(message));
-    debugPrint("[ROS] Subscribed to $topicName");
   }
 
   /// Publish safely, even if not connected yet

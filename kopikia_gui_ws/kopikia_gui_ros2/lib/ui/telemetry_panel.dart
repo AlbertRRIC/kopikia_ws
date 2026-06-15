@@ -29,7 +29,7 @@ class _TelemetryPanelState extends State<TelemetryPanel> {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(6),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -37,7 +37,15 @@ class _TelemetryPanelState extends State<TelemetryPanel> {
               "Telemetry",
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 4),
+            ValueListenableBuilder<String>(
+              valueListenable: widget.rosConnection.localIpNotifier,
+              builder: (context, ip, _) => Text(
+                "IP: $ip",
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 6),
             Text(latestData),
           ],
         ),

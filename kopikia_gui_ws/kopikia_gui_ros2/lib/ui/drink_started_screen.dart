@@ -53,7 +53,7 @@ class _DrinkStartedScreenState extends State<DrinkStartedScreen> {
             Image.asset(
               'assets/images/drink_started.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),

@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: kopikia-bot
 Version: 0.0.0
-Summary: TODO: Package description
+Summary: Kopikia Bot package for xArm and Vision integration
 Home-page: UNKNOWN
 Maintainer: rric
-Maintainer-email: rric@todo.todo
-License: TODO: License declaration
+Maintainer-email: rric@example.com
+License: Apache License 2.0
 Platform: UNKNOWN
 
 UNKNOWN

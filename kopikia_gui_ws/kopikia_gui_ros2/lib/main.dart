@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kopikia_gui_ros2/ui/cup_transition_screen.dart';
 import 'ros/ros_connection.dart';
-import 'ui/telemetry_panel.dart';
+
 import 'ui/fetching_cup_screen.dart';
 import 'ui/cup_acquired_screen.dart';
 import 'ui/serve_cup_screen.dart';
@@ -10,6 +10,9 @@ import 'ui/select_drink_screen.dart';
 import 'ui/drink_started_screen.dart';
 import 'ui/drink_ready_screen.dart';
 import 'ui/grap_cup_screen.dart';
+import 'ui/setup_screen.dart';
+import 'ui/cup_selection_screen.dart';
+import 'ui/drink_selection_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Initialize RosConnection
-    final rosConnection = RosConnection(url: "ws://172.26.115.102:9090");
+    final rosConnection = RosConnection(url: "ws://127.0.0.1:9090");
     rosConnection.subscribeToTelemetry('/barista/status'); // Subscribe to telemetry
 
     // Debug listener to verify notifier updates
@@ -56,6 +59,18 @@ class MyApp extends StatelessWidget {
               return GrapCupScreen(rosConnection: rosConnection);
             case 'cup_transition':  
               return CupTransitionScreen(rosConnection: rosConnection);
+            case 'drink_selection':
+              return DrinkSelectionScreen(
+                title: 'Kopi Kia Robot Barista',
+                rosConnection: rosConnection,
+              );
+            case 'cup_selection':
+              return CupSelectionScreen(
+                title: 'Kopi Kia Robot Barista',
+                rosConnection: rosConnection,
+              );
+            case 'setup':
+              return SetupScreen(rosConnection: rosConnection);
             case 'serve_cup':
               return ServeCupScreen(rosConnection: rosConnection);      
             case 'home':
@@ -71,151 +86,82 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   final String title;
   final RosConnection rosConnection;
 
   const MyHomePage({super.key, required this.title, required this.rosConnection});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  // Configurable button size
-  double buttonSize = 320;
-
-  // Drink labels
-  final List<String> labels = [
-    "Espresso",
-    "Americano",
-    "Cappuccino",
-    "Latte",
-    "Milo",
-    "Milo Mocha",
-    "Salted Caramel Latte",
-    "Matcha Latte",
-    "Dirty Matcha",
-  ];
-
-  // Paths to coffee images in assets
-  final List<String> images = [
-    'assets/images/espresso.png',
-    'assets/images/americano.png',
-    'assets/images/cappuccino.png',
-    'assets/images/latte.png',
-    'assets/images/milo.png',
-    'assets/images/mocha.png',
-    'assets/images/salted_caramel_latte.png',
-    'assets/images/matcha_latte.png',
-    'assets/images/dirty_matcha.png',
-  ];
-
-  @override
   Widget build(BuildContext context) {
-    double textSize = 36;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        centerTitle: true,
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-          child: Text(
-            widget.title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+        leadingWidth: 200,
+        leading: Center(
+          child: ValueListenableBuilder<String>(
+            valueListenable: rosConnection.localIpNotifier,
+            builder: (context, ip, _) => Text(
+              'IP: $ip',
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
             ),
           ),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings, color: Colors.white, size: 32),
+            onPressed: () {
+              rosConnection.screenNotifier.value = 'setup';
+            },
+          ),
+          const SizedBox(width: 16),
+        ],
+        centerTitle: true,
+        title: Text(
+          title,
+          style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
+        ),
       ),
       body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              // Telemetry Panel (safe subscription)
-              TelemetryPanel(rosConnection: widget.rosConnection),
-
-              // Homepage title above the grid
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24.0),
-                child: Text(
-                  'Select a Drink',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple,
-                  ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.info_outline, size: 120, color: Colors.deepPurple),
+            const SizedBox(height: 40),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 60),
+              child: Text(
+                'Please place the two different cup designs onto the cup holder.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 42,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
                 ),
               ),
-
-              // 3x3 Button Grid
-              SizedBox(
-                width: buttonSize * 3 + 24,
-                height: buttonSize * 3 + 24,
-                child: GridView.count(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 1,
-                  physics: const NeverScrollableScrollPhysics(),
-                  children: List.generate(9, (index) {
-                    return SizedBox(
-                      width: buttonSize,
-                      height: buttonSize,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.zero,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18),
-                          ),
-                        ),
-                        onPressed: () {
-                          debugPrint("${labels[index]} pressed");
-
-                          widget.rosConnection.publish(
-                            topic: "/barista/cmd",
-                            messageType: "std_msgs/String",
-                            msg: {
-                              "data": labels[index]
-                                  .toLowerCase()
-                                  .replaceAll(' ', '_')
-                            },
-                          );
-                        },
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: buttonSize * 0.6,
-                              height: buttonSize * 0.6,
-                              child: Image.asset(
-                                images[index],
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                            SizedBox(height: buttonSize * 0.05),
-                            Text(
-                              labels[index],
-                              style: TextStyle(fontSize: textSize),
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
+            ),
+            const SizedBox(height: 60),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 25),
+                backgroundColor: Colors.deepPurple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40),
                 ),
               ),
-            ],
-          ),
+              onPressed: () {
+                rosConnection.screenNotifier.value = 'cup_selection';
+              },
+              child: const Text(
+                'Start Selection',
+                style: TextStyle(fontSize: 28, color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -12,14 +12,14 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
-ARMPresent = False
+ARMPresent = True
 
 #######################################################
 #kopikia home J1 0 J2 0 J3 0 J4 0 J5 -90 j6 0
 
 #####################ARRAYS#############################
 HomeToReady_list = [
-			   [0, 0, 0, 0, -90, 0],
+			   [30, 0, 0, 0, -90, 0],
 			   #[-90, -25, -100, 0, 122, 0],
 			   #[0, -25, -100, 0, 122, 0]
 			   ]
@@ -357,6 +357,7 @@ class ArmROSNode(Node):
 			time.sleep(5)
 			self.publish_status('KopiKia:serve cup')
 			time.sleep(5)
+			HomeToReady(self.arm, 15, False, True, HomeToReady_list)
 			self.publish_status('KopiKia:returned home')
 		else:
 			self.get_logger().info(f'Unknown command: {cmd}')
@@ -393,7 +394,9 @@ def main():
 	# If run with `--ros`, start ROS2 node to publish/subscribe
 	if '--ros' in sys.argv:
 		rclpy.init()
-		node = ArmROSNode(None)
+		# Pass the initialized arm instance to the ROS node
+		arm_instance = arm if ARMPresent else None
+		node = ArmROSNode(arm_instance)
 		try:
 			rclpy.spin(node)
 		except KeyboardInterrupt:
@@ -403,19 +406,19 @@ def main():
 			rclpy.shutdown()
 		return
 
-	if ARMPresent:
-		HomeToReady(arm, 15, False, True, HomeToReady_list)
-		HomeToCup(arm, 15, False, True, HomeToCup_list)
-		CupToAlign(arm, 15, False, True, CupToAlign_list)   
-		CupToCoffee(arm, 15, False, True, CupToCoffee_list)	 
-		CupToAlign(arm, 15, False, True, CupToAlign_list)
-		CoffeeToScreen(arm, 15, False, True, CoffeeToScreen_list)
-		CupToAlign(arm, 15, False, True, CupToAlign_list)
-		CupToCoffee(arm, 15, False, True, CupToCoffee_list)	 
-		CoffeeToReady(arm, 15, False, True, CoffeeToReady_list)	 
-		HomeToReady(arm, 15, False, True, HomeToReady_list)
-		CoffeeToServe(arm, 15, False, True, CoffeeToServe_list)
-		HomeToReady(arm, 15, False, True, HomeToReady_list)
+	#if ARMPresent:
+	#	HomeToReady(arm, 15, False, True, HomeToReady_list)
+	#	HomeToCup(arm, 15, False, True, HomeToCup_list)
+	#	CupToAlign(arm, 15, False, True, CupToAlign_list)   
+	#	CupToCoffee(arm, 15, False, True, CupToCoffee_list)	 
+	#	CupToAlign(arm, 15, False, True, CupToAlign_list)
+	#	CoffeeToScreen(arm, 15, False, True, CoffeeToScreen_list)
+	#	CupToAlign(arm, 15, False, True, CupToAlign_list)
+	#	CupToCoffee(arm, 15, False, True, CupToCoffee_list)	 
+	#	CoffeeToReady(arm, 15, False, True, CoffeeToReady_list)	 
+	#	HomeToReady(arm, 15, False, True, HomeToReady_list)
+	#	CoffeeToServe(arm, 15, False, True, CoffeeToServe_list)
+	#	HomeToReady(arm, 15, False, True, HomeToReady_list)
 
 if __name__ == '__main__':
 	main()

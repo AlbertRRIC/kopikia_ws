@@ -53,7 +53,7 @@ class _PositionCupScreenState extends State<PositionCupScreen> {
             Image.asset(
               'assets/images/position_cup.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),

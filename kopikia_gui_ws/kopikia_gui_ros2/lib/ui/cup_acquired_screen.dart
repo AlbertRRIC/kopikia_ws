@@ -53,7 +53,7 @@ class _CupAcquiredScreenState extends State<CupAcquiredScreen> {
             Image.asset(
               'assets/images/cup_acquired.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),

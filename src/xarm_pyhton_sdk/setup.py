@@ -11,12 +11,12 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'rclpy'],
     zip_safe=True,
     maintainer='rric',
-    maintainer_email='rric@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer_email='rric@example.com',
+    description='Kopikia Bot package for xArm and Vision integration',
+    license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

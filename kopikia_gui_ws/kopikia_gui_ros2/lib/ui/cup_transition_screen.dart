@@ -53,7 +53,7 @@ class _CupTransitionScreenState extends State<CupTransitionScreen> {
             Image.asset(
               'assets/images/cup_transition.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),

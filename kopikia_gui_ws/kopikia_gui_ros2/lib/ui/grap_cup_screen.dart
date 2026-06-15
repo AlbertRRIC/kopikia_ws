@@ -53,7 +53,7 @@ class _GrapCupScreenState extends State<GrapCupScreen> {
             Image.asset(
               'assets/images/grap_cup.png',
               width: 1280,
-              height: 1024,
+              height: 949,
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),
