@@ -1,6 +1,9 @@
 # Kill any existing instances to prevent port binding issues
 killall -9 rosbridge_websocket 2>/dev/null
 
+# Clean up stale FastDDS shared memory segments
+rm /dev/shm/fastrtps_port* 2>/dev/null
+
 # ROSBridge terminal
 gnome-terminal --title="ROSBridge" -- bash -c "
 source ~/MyProject/kopikia_ws/install/setup.bash
@@ -11,7 +14,20 @@ exec bash
 # Prearm node terminal
 gnome-terminal --title="Preparm" -- bash -c "
 source ~/MyProject/kopikia_ws/install/setup.bash
-ros2 run kopikia_bot preparm 192.168.1.223 --ros
+ros2 run kopikia_bot preparm --ros
+exec bash
+"
+# Camera Node terminal
+gnome-terminal --title="RealSense Camera Node" -- bash -c "
+source ~/MyProject/kopikia_ws/install/setup.bash
+python3 ~/MyProject/kopikia_ws/src/kopikia_vision/camera_setup.py
+exec bash
+"
+
+# YOLO Node terminal
+gnome-terminal --title="YOLO Detection" -- bash -c "
+source ~/MyProject/kopikia_ws/install/setup.bash
+python3 ~/MyProject/kopikia_ws/src/kopikia_vision/yolo_detection.py
 exec bash
 "
 

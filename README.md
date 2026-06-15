@@ -17,4 +17,6 @@
 # colcon build
 # source install/setup.bash
 # ros2 run piper_ros tts_node
-    
+
+
+#ros2 run rqt_image_view rqt_image_view

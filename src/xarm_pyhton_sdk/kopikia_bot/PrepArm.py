@@ -12,7 +12,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 
-ARMPresent = True
+ARMPresent = False
 
 #######################################################
 #kopikia home J1 0 J2 0 J3 0 J4 0 J5 -90 j6 0
@@ -357,7 +357,9 @@ class ArmROSNode(Node):
 			time.sleep(5)
 			self.publish_status('KopiKia:serve cup')
 			time.sleep(5)
+		if ARMPresent:	
 			HomeToReady(self.arm, 15, False, True, HomeToReady_list)
+
 			self.publish_status('KopiKia:returned home')
 		else:
 			self.get_logger().info(f'Unknown command: {cmd}')
