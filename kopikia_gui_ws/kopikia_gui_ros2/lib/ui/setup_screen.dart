@@ -21,8 +21,16 @@ class SetupScreen extends StatelessWidget {
         final String sourcePath = result.files.single.path!;
         final String fileName = result.files.single.name;
         
-        // Target project directory for AI training images
-        final String targetDirPath = '/home/jetsonros2/MyProject/kopikia_ws/kopikia_gui_ws/kopikia_gui_ros2/assets/photo';
+        String targetDirPath;
+        if (category == "Cup 1 Design") {
+          // Optionally, you could rename the file to a standard name like "cup1.jpg"
+          targetDirPath = '/home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/assets/cup1';
+        } else if (category == "Cup 2 Design") {
+          // Optionally, rename to "cup2.jpg"
+          targetDirPath = '/home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/assets/cup2';
+        } else {
+          return;
+        }
         
         // Ensure the target directory exists
         await Directory(targetDirPath).create(recursive: true);

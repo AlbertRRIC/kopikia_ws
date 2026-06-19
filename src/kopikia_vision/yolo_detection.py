@@ -23,8 +23,7 @@ class YoloDetectionNode(Node):
         self.br = CvBridge()
         
         # Load YOLO11 model (n is for nano, best for Jetson performance)
-        # It will download the .pt file on the first run
-        self.model = YOLO('yolo11n.pt') 
+        self.model = YOLO('model/yolo11n.pt') 
         
         self.get_logger().info("YOLO11 Detection Node has started.")
 
