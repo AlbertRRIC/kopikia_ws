@@ -14,7 +14,7 @@ exec bash
 # Prearm node terminal
 gnome-terminal --title="Preparm" -- bash -c "
 source ~/MyProject/kopikia_ws/install/setup.bash
-ros2 run kopikia_bot preparm --ros
+ros2 run kopikia_bot preparm 192.168.1.223--ros
 exec bash
 "
 # Camera Node terminal

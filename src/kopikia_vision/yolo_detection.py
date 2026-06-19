@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import rclpy
+from pathlib import Path
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
@@ -23,7 +24,14 @@ class YoloDetectionNode(Node):
         self.br = CvBridge()
         
         # Load YOLO11 model (n is for nano, best for Jetson performance)
-        self.model = YOLO('model/yolo11n.pt') 
+        MODEL_DIR = Path(__file__).parent / 'model'
+        best_weights = MODEL_DIR / 'cup_detector' / 'weights' / 'best.pt'
+        if best_weights.exists():
+            self.model = YOLO(best_weights)
+            self.get_logger().info(f"YOLO11 Detection Node started with custom model: {best_weights.name}")
+        else:
+            self.model = YOLO(MODEL_DIR / 'yolo11n.pt')
+            self.get_logger().info("YOLO11 Detection Node started with pretrained yolo11n.pt")
         
         self.get_logger().info("YOLO11 Detection Node has started.")
 

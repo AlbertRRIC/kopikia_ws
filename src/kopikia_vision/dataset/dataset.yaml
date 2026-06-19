@@ -1,0 +1,7 @@
+path: /home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/dataset
+train: train
+val: val
+names:
+  0: cup1
+  1: cup2
+nc: 2
