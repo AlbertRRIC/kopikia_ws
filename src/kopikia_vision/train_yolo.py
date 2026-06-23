@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+import os
+# Tells cuBLAS to use a memory allocation configuration that is less prone to fragmentation
+os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8" 
+# Frees memory blocks eagerly instead of caching them aggressively
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
 import shutil
 import sys
 from pathlib import Path
@@ -56,10 +63,13 @@ def train_model():
         data=str(dataset_yaml.parent),
         epochs=50,
         imgsz=224,
-        batch=8,
+        amp=False,
+        batch=4,
+        workers=1,
         device='0',
         project=str(MODEL_DIR),
         name='cup_classifier',
+        cache=False,
         verbose=True
     )
 

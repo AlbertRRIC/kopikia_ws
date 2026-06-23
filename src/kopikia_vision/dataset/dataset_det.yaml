@@ -1,4 +1,4 @@
-path: .
+path: /home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/dataset
 train: train/images
 val: val/images
 nc: 2

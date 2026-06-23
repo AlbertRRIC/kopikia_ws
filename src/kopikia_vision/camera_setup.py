@@ -14,6 +14,8 @@ class RealSenseNode(Node):
         self.publisher_ = self.create_publisher(Float32, 'camera/distance', 10)
         # Create a publisher for the color image stream for YOLO integration
         self.image_publisher_ = self.create_publisher(Image, 'camera/color/image_raw', 10)
+        # Create a publisher for the depth image for object distance measurement
+        self.depth_publisher_ = self.create_publisher(Image, 'camera/depth/image_raw', 10)
         self.br = CvBridge()
         
         # Align object: ensures depth and color frames share the same coordinate system
@@ -61,6 +63,10 @@ class RealSenseNode(Node):
             # Convert color frame to numpy array and publish as ROS Image
             color_image = np.asanyarray(color_frame.get_data())
             self.image_publisher_.publish(self.br.cv2_to_imgmsg(color_image, encoding="bgr8"))
+            
+            # Convert depth frame to numpy array and publish as ROS Image
+            depth_image = np.asanyarray(depth_frame.get_data())
+            self.depth_publisher_.publish(self.br.cv2_to_imgmsg(depth_image, encoding="passthrough"))
 
         except Exception as e:
             self.get_logger().warn(f"Could not read frame: {e}")

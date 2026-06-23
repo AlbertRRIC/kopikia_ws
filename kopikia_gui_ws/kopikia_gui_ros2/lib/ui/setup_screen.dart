@@ -126,8 +126,8 @@ class _SetupScreenState extends State<SetupScreen> {
     }
   }
 
-  Future<void> _runYoloTraining() async {
-    final String scriptPath = '/home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/train_pipeline.py';
+  Future<void> _runYoloClassification() async {
+    final String scriptPath = '/home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/train_classification.py';
     _trainingState.value = TrainingState(log: 'Starting training...\n', isTraining: true);
 
     final Process process = await Process.start('python3', [scriptPath]);
@@ -170,7 +170,51 @@ class _SetupScreenState extends State<SetupScreen> {
     }
   }
 
-  void _showTrainingDialog() {
+  Future<void> _runYoloDetection() async {
+    final String scriptPath = '/home/jetsonros2/MyProject/kopikia_ws/src/kopikia_vision/train_detection.py';
+    _trainingState.value = TrainingState(log: 'Starting training...\n', isTraining: true);
+
+    final Process process = await Process.start('python3', [scriptPath]);
+
+    String stderrBuffer = '';
+
+    process.stdout.transform(const SystemEncoding().decoder).listen((data) {
+      _trainingState.value = TrainingState(
+        log: _trainingState.value.log + data,
+        isTraining: true,
+      );
+    });
+
+    process.stderr.transform(const SystemEncoding().decoder).listen((data) {
+      stderrBuffer += data;
+      _trainingState.value = TrainingState(
+        log: _trainingState.value.log + '\nErrors:\n' + stderrBuffer,
+        isTraining: true,
+      );
+    });
+
+    final int exitCode = await process.exitCode;
+
+    String finalMessage = '';
+    if (exitCode == 0) {
+      finalMessage = 'YOLO training completed successfully.';
+    } else {
+      finalMessage = 'Training failed with exit code $exitCode.';
+    }
+
+    _trainingState.value = TrainingState(
+      log: _trainingState.value.log + '\n$finalMessage\n',
+      isTraining: false,
+    );
+
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(finalMessage)),
+      );
+    }
+  }
+
+  void _showClassificationDialog() {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -180,7 +224,7 @@ class _SetupScreenState extends State<SetupScreen> {
           builder: (context, trainingState, child) {
             final showContinueButton = trainingState.log.contains('ACTION REQUIRED') || trainingState.log.contains('Continue button');
             return AlertDialog(
-              title: const Text('YOLO Training Log'),
+              title: const Text('YOLO Classification Training Log'),
               content: Container(
                 width: double.maxFinite,
                 height: 400,
@@ -221,7 +265,61 @@ class _SetupScreenState extends State<SetupScreen> {
         );
       },
     );
-    _runYoloTraining();
+    _runYoloClassification();
+  }
+
+  void _showDetectionDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext dialogContext) {
+        return ValueListenableBuilder<TrainingState>(
+          valueListenable: _trainingState,
+          builder: (context, trainingState, child) {
+            final showContinueButton = trainingState.log.contains('ACTION REQUIRED') || trainingState.log.contains('Continue button');
+            return AlertDialog(
+              title: const Text('YOLO Detection Training Log'),
+              content: Container(
+                width: double.maxFinite,
+                height: 400,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(12),
+                child: SingleChildScrollView(
+                  reverse: true,
+                  child: Text(
+                    trainingState.log,
+                    style: const TextStyle(
+                      color: Colors.green,
+                      fontFamily: 'monospace',
+                      fontSize: 12,
+                    ),
+                  ),
+                ),
+              ),
+              actions: <Widget>[
+                if (showContinueButton)
+                  TextButton(
+                    onPressed: () async {
+                      await _signalContinue();
+                    },
+                    child: const Text('Continue'),
+                  ),
+                TextButton(
+                  onPressed: trainingState.isTraining ? null : () {
+                    Navigator.of(dialogContext).pop();
+                  },
+                  child: const Text('Close'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+    _runYoloDetection();
   }
 
   @override
@@ -271,9 +369,9 @@ class _SetupScreenState extends State<SetupScreen> {
                   ),
                   const SizedBox(width: 100),
                   _buildImportTile(
-                    label: "Train Pipeline",
-                    icon: Icons.fitness_center,
-                    onPressed: () => _showTrainingDialog(),
+                    label: "Train Detector",
+                    icon: Icons.construction,
+                    onPressed: () => _showDetectionDialog(),
                   ),
                 ],
               ),

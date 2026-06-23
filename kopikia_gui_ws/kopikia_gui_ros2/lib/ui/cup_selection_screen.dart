@@ -52,8 +52,8 @@ class CupSelectionScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildCupButton('Cup 1', 'assets/photo/cup1.png'),
-                _buildCupButton('Cup 2', 'assets/photo/cup2.png'),
+                _buildCupButton('Cup1', 'assets/photo/cup1.png'),
+                _buildCupButton('Cup2', 'assets/photo/cup2.png'),
               ],
             ),
           ],
@@ -66,6 +66,13 @@ class CupSelectionScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         debugPrint("$label selected");
+        rosConnection.publish(
+          topic: "/barista/cmd",
+          messageType: "std_msgs/String",
+          msg: {
+            "data": label.toLowerCase()
+          },
+        );
         rosConnection.screenNotifier.value = 'drink_selection';
       },
       child: Column(
